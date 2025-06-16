@@ -1,0 +1,188 @@
+/* Custom Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-in {
+    animation: slideIn 1s ease-in-out;
+}
+
+
+/* Print Styles for Resume */
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #resume,
+    #resume * {
+        visibility: visible;
+    }
+    #resume {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: white;
+        color: black;
+        padding: 20px;
+    }
+    .no-print {
+        display: none !important;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+
+/* General Styling Enhancements */
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+
+/* Button Styling */
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Card Styling */
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+
+/* Section Styling */
+
+section {
+    padding: 60px 20px;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #222;
+}
+
+section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: #555;
+}
+
+
+/* Utility Classes */
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: white;
+}
+
+.bg-primary {
+    background-color: #007BFF;
+}
+
+.bg-secondary {
+    background-color: #6c757d;
+}
+
+.rounded {
+    border-radius: 5px;
+}
+
+.shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transition {
+    transition: all 0.3s ease;
+}
